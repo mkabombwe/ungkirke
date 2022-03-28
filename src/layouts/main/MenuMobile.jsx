@@ -72,7 +72,6 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
 				<Scrollbar>
 					{/* <Logo sx={{ mx: 2.5, my: 3 }} /> */}
 					logo
-
 					<List disablePadding>
 						{navConfig.map((link) => (
 							<MenuMobileItem key={link.title} item={link} />

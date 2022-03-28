@@ -21,7 +21,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function ComeDine() {
 	return (
 		<Page
-			title={'Til middag hos | Ungkirke'}
+			title={'Til middag hos'}
 			// description={t('sections.home.seo.description')}
 			// keywords=''
 			// url=''

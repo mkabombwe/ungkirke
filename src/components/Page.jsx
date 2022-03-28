@@ -20,7 +20,7 @@ const Page = forwardRef((props, ref) => {
 	return (
 		<>
 			<Helmet>
-				{title && <title>{title} | Worthmore</title>}
+				{title && <title>{title} | Ungkirke</title>}
 				{title && <meta name='title' content={title + ' | Worthmore'} />}
 				<meta name='description' content={description} />
 				<meta name='keywords' content={keywords} />

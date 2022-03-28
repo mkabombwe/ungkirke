@@ -84,17 +84,26 @@ export default function HomeHero() {
 						</m.div>
 
 						<m.div variants={varFade().inRight}>
-							<Typography sx={{ color: 'common.white' }}>Vær med når vi holder til middag hos bla bla bla</Typography>
+							<Typography sx={{ color: 'common.white' }}>
+								Vær med når vi afholder ‘Til middag hos’ d.1 April kl.18. Det bliver en aften med mad, brætspil og alt
+								andet hygge.
+								<br />
+								<br />
+								Du kan tilmelde dig som vært eller gæst. Er du vært afholder du en middag hjemme hos dig hvor vi sender
+								en gruppe gæster hjem til dig. Er du gæst får du tildelt et hjem. Der vil være tilskud til aftensmaden
+								samt en værterpakke for at hjælpe med at gøre aftenen til en succes! Skriv i kommentarfeltet hvis du
+								ønsker at være co-vært eller ønske en ven at følges med.
+							</Typography>
 						</m.div>
 
 						<m.div variants={varFade().inRight}>
 							<Stack spacing={2.5} sx={{ display: 'flex', alignItems: { md: 'start', xs: 'center' } }}>
 								<Typography variant='overline' sx={{ color: 'primary.light' }}>
-									D. 12. 12 2022
+									Håber vi ses til en super hyggelig aften med alt det gode!
 								</Typography>
-								<Button size='large' variant='contained'>
+								{/* <Button size='large' variant='contained'>
 									Tilmeld dig nu!
-								</Button>
+								</Button> */}
 							</Stack>
 						</m.div>
 					</ContentStyle>
