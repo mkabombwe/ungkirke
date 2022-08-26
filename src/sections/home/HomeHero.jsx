@@ -1,10 +1,9 @@
 import { m } from 'framer-motion'
 // @mui
 import { styled } from '@mui/material/styles'
-import { Box, Container, Typography, Stack, Button } from '@mui/material'
+import { Box, Container, Typography, Stack } from '@mui/material'
 // components
 import { MotionContainer, varFade } from '../../components/animate'
-// import SocialsButton from '../../components/SocialsButton'
 // utils
 import setMarked from '../../utils/setMarked'
 //

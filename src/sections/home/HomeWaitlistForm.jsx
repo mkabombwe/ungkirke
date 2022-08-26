@@ -11,7 +11,7 @@ import { DB } from '../../config'
 // firebase
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore'
 // @mui
-import { Stack, Alert, Button, Dialog, DialogActions, DialogContent, Grid } from '@mui/material'
+import { Alert, Button, Dialog, DialogActions, DialogContent, Grid } from '@mui/material'
 import { LoadingButton } from '@mui/lab'
 
 export default function HomeWaitlistForm() {
@@ -103,7 +103,7 @@ export default function HomeWaitlistForm() {
 								</RHFSelect>
 							</Grid>
 							<Grid item xs={12}>
-								<RHFTextField name='message' label='Besked' multiline rows={3} fullWidth />
+								<RHFTextField name='message' label='Kommentar' multiline rows={3} fullWidth />
 							</Grid>
 						</Grid>
 					</DialogContent>
