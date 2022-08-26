@@ -80,14 +80,15 @@ export default function HomeHero() {
 
 						<m.div variants={varFade().inRight}>
 							<Typography sx={{ color: 'common.white' }}>
-								Vær med når vi afholder ‘Til middag hos’ d. 29 September kl.18. Det bliver en aften med mad, brætspil og
+								Vær med når vi afholder ‘Til middag hos’ d. 29 september kl.18. Det bliver en aften med mad, brætspil og
 								alt andet hygge.
 								<br />
 								<br />
-								Du kan tilmelde dig som vært eller deltager. Er du vært afholder du en middag hjemme hos dig hvor vi
-								sender en gruppe gæster hjem til dig. Er du gæst får du tildelt et hjem. Der vil være tilskud til
-								aftensmaden samt en værterpakke for at hjælpe med at gøre aftenen til en succes! Skriv i kommentarfeltet
-								hvis du ønsker at være co-vært eller ønske en ven at følges med.
+								Du kan tilmelde dig som vært eller deltager. Er du vært, afholder du en middag hjemme hos dig, hvor vi
+								sender en gruppe gæster hjem til dig. Er du gæst, får du tildelt et hjem. Der vil være tilskud til
+								aftensmaden til at gøre aftenen en kæmpe succes! Skriv gerne i kommentarfeltet hvis du ønsker at være
+								co-vært eller ønsker en ven at følges med. Vær med når vi afholder ‘Til middag hos’ d. 29 September
+								kl.18. Det bliver en aften med mad, brætspil og alt andet hygge.
 							</Typography>
 						</m.div>
 

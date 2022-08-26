@@ -5,7 +5,7 @@
 		"i": "npm i --legacy-peer-deps",
 		"rm": "rm -rf node_modules dist package-lock.json",
 		"clean": "npm run rm && npm run i",
-		"start": "vite",
+		"start": "vite --port 8000",
 		"build": "vite build",
 		"serve": "vite preview --port 8000",
 		"lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",

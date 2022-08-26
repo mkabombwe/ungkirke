@@ -11,7 +11,7 @@ import { DB } from '../../config'
 // firebase
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore'
 // @mui
-import { Stack, Alert, Button, Dialog, DialogActions, DialogContent } from '@mui/material'
+import { Stack, Alert, Button, Dialog, DialogActions, DialogContent, Grid } from '@mui/material'
 import { LoadingButton } from '@mui/lab'
 
 export default function HomeWaitlistForm() {
@@ -78,22 +78,34 @@ export default function HomeWaitlistForm() {
 			<Dialog open={open} onClose={handleClick} fullWidth>
 				<FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
 					<DialogContent>
-						<Stack spacing={2}>
+						<Grid container spacing={2}>
 							{!!errors.afterSubmit && <Alert severity='error'>{errors.afterSubmit.message}</Alert>}
 
-							<RHFTextField name='firstName' label='Fornavn' fullWidth />
-							<RHFTextField name='lastName' label='Efternavn' fullWidth />
-							<RHFTextField name='email' label='E-mail' fullWidth />
-							<RHFTextField name='phone' label='Telefon' fullWidth />
-							<RHFTextField name='message' label='Besked' fullWidth />
+							<Grid item xs={12} md={6}>
+								<RHFTextField name='firstName' label='Fornavn' fullWidth />
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<RHFTextField name='lastName' label='Efternavn' fullWidth />
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<RHFTextField name='email' label='E-mail' fullWidth />
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<RHFTextField name='phone' label='Telefon' fullWidth />
+							</Grid>
 
-							<RHFSelect name='type' label='Type' fullWidth>
-								<option value='deltager' defaultChecked>
-									Deltager
-								</option>
-								<option value='vært'>Vært</option>
-							</RHFSelect>
-						</Stack>
+							<Grid item xs={12}>
+								<RHFSelect name='type' label='Type' fullWidth>
+									<option value='deltager' defaultChecked>
+										Deltager
+									</option>
+									<option value='vært'>Vært</option>
+								</RHFSelect>
+							</Grid>
+							<Grid item xs={12}>
+								<RHFTextField name='message' label='Besked' multiline rows={3} fullWidth />
+							</Grid>
+						</Grid>
 					</DialogContent>
 					<DialogActions>
 						<LoadingButton fullWidth size='large' type='submit' variant='contained' loading={isSubmitting}>
