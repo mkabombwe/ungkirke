@@ -2,14 +2,13 @@ import { m } from 'framer-motion'
 // @mui
 import { styled } from '@mui/material/styles'
 import { Box, Container, Typography, Stack, Button } from '@mui/material'
-// routes
 // components
 import { MotionContainer, varFade } from '../../components/animate'
 // import SocialsButton from '../../components/SocialsButton'
 // utils
 import setMarked from '../../utils/setMarked'
 //
-// import HomeWaitlistForm from './HomeWaitlistForm'
+import { HomeWaitlistForm } from '.'
 
 // ----------------------------------------------------------------------
 
@@ -67,13 +66,9 @@ export default function HomeHero() {
 	return (
 		<MotionContainer>
 			<RootStyle>
-				<HeroOverlayStyle
-					alt='overlay'
-					src='https://minimal-assets-api.vercel.app/assets/overlay.svg'
-					variants={varFade().in}
-				/>
+				<HeroOverlayStyle alt='overlay' src='/assets/overlay.svg' variants={varFade().in} />
 
-				<HeroImgStyle alt='hero' src='/images/hero.jpg' variants={varFade().inUp} />
+				<HeroImgStyle alt='hero' src='/assets/bg_hero.jpg' variants={varFade().inUp} />
 
 				<Container>
 					<ContentStyle>
@@ -85,14 +80,14 @@ export default function HomeHero() {
 
 						<m.div variants={varFade().inRight}>
 							<Typography sx={{ color: 'common.white' }}>
-								Vær med når vi afholder ‘Til middag hos’ d.1 April kl.18. Det bliver en aften med mad, brætspil og alt
-								andet hygge.
+								Vær med når vi afholder ‘Til middag hos’ d. 29 September kl.18. Det bliver en aften med mad, brætspil og
+								alt andet hygge.
 								<br />
 								<br />
-								Du kan tilmelde dig som vært eller gæst. Er du vært afholder du en middag hjemme hos dig hvor vi sender
-								en gruppe gæster hjem til dig. Er du gæst får du tildelt et hjem. Der vil være tilskud til aftensmaden
-								samt en værterpakke for at hjælpe med at gøre aftenen til en succes! Skriv i kommentarfeltet hvis du
-								ønsker at være co-vært eller ønske en ven at følges med.
+								Du kan tilmelde dig som vært eller deltager. Er du vært afholder du en middag hjemme hos dig hvor vi
+								sender en gruppe gæster hjem til dig. Er du gæst får du tildelt et hjem. Der vil være tilskud til
+								aftensmaden samt en værterpakke for at hjælpe med at gøre aftenen til en succes! Skriv i kommentarfeltet
+								hvis du ønsker at være co-vært eller ønske en ven at følges med.
 							</Typography>
 						</m.div>
 
@@ -101,9 +96,8 @@ export default function HomeHero() {
 								<Typography variant='overline' sx={{ color: 'primary.light' }}>
 									Håber vi ses til en super hyggelig aften med alt det gode!
 								</Typography>
-								{/* <Button size='large' variant='contained'>
-									Tilmeld dig nu!
-								</Button> */}
+
+								<HomeWaitlistForm />
 							</Stack>
 						</m.div>
 					</ContentStyle>

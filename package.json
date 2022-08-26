@@ -2,6 +2,9 @@
 	"name": "ungkirke",
 	"version": "1.0.0",
 	"scripts": {
+		"i": "npm i --legacy-peer-deps",
+		"rm": "rm -rf node_modules dist package-lock.json",
+		"clean": "npm run rm && npm run i",
 		"start": "vite",
 		"build": "vite build",
 		"serve": "vite preview --port 8000",
