@@ -94,6 +94,7 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
+/.next
 
 npm-debug.log*
 yarn-debug.log*

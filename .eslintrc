@@ -38,6 +38,7 @@
 	// },
 	"rules": {
 		"prettier/prettier": "warn",
+		"import/no-unresolved": "warn",
 		"import": 0,
 		"max-len": 0,
 		"no-alert": 0,
