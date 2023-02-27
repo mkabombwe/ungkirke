@@ -8,11 +8,13 @@ import { bgBlur } from '@/utils/cssStyles'
 import { HEADER } from '@/utils/config'
 // components
 import Logo from '@/components/logo'
+import useResponsive from '@/hooks/useResponsive'
 
 // ----------------------------------------------------------------------
 
 export default function Header() {
 	const theme = useTheme()
+	const isDesktop = useResponsive('up', 'md')
 
 	const isOffset = useOffSetTop(HEADER.H_MAIN_DESKTOP)
 
@@ -22,18 +24,18 @@ export default function Header() {
 				disableGutters
 				sx={{
 					height: {
-						xs: HEADER.H_MOBILE,
-						md: HEADER.H_MAIN_DESKTOP
+						xs: HEADER.H_MOBILE
+						// md: HEADER.H_MAIN_DESKTOP
 					},
 					transition: theme.transitions.create(['height', 'background-color'], {
 						easing: theme.transitions.easing.easeInOut,
 						duration: theme.transitions.duration.shorter
 					}),
 					...(isOffset && {
-						...bgBlur({ color: theme.palette.background.default }),
-						height: {
-							md: HEADER.H_MAIN_DESKTOP - 16
-						}
+						...bgBlur({ color: theme.palette.background.default })
+						// height: {
+						// 	md: HEADER.H_MAIN_DESKTOP - 16
+						// }
 					})
 				}}
 			>
@@ -45,7 +47,7 @@ export default function Header() {
 						justifyContent: 'center'
 					}}
 				>
-					<Logo color={isOffset ? '#000' : '#FFF'} />
+					<Logo color={isOffset || !isDesktop ? '#000' : '#FFF'} />
 				</Container>
 			</Toolbar>
 

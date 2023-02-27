@@ -1,14 +1,7 @@
 // form
 import { useFormContext, Controller } from 'react-hook-form'
 // @mui
-import {
-	Checkbox,
-	FormLabel,
-	FormGroup,
-	FormControl,
-	FormHelperText,
-	FormControlLabel
-} from '@mui/material'
+import { Checkbox, FormLabel, FormGroup, FormControl, FormHelperText, FormControlLabel } from '@mui/material'
 
 // ----------------------------------------------------------------------
 
@@ -38,9 +31,7 @@ export function RHFMultiCheckbox({ row, name, label, options, spacing, helperTex
 	const { control } = useFormContext()
 
 	const getSelected = (selectedItems, item) =>
-		selectedItems.includes(item)
-			? selectedItems.filter((value) => value !== item)
-			: [...selectedItems, item]
+		selectedItems.includes(item) ? selectedItems.filter((value) => value !== item) : [...selectedItems, item]
 
 	return (
 		<Controller

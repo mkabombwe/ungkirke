@@ -1,26 +1,11 @@
 // form
 import { useFormContext, Controller } from 'react-hook-form'
 // @mui
-import {
-	Radio,
-	FormLabel,
-	RadioGroup,
-	FormControl,
-	FormHelperText,
-	FormControlLabel
-} from '@mui/material'
+import { Radio, FormLabel, RadioGroup, FormControl, FormHelperText, FormControlLabel } from '@mui/material'
 
 // ----------------------------------------------------------------------
 
-export default function RHFRadioGroup({
-	row,
-	name,
-	label,
-	options,
-	spacing,
-	helperText,
-	...other
-}) {
+export default function RHFRadioGroup({ row, name, label, options, spacing, helperText, ...other }) {
 	const { control } = useFormContext()
 
 	const labelledby = label ? `${name}-${label}` : ''

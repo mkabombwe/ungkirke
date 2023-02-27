@@ -15,12 +15,13 @@ const StyledRoot = styled('div')(({ theme }) => ({
 	backgroundSize: 'cover',
 	backgroundPosition: 'center',
 	backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0, .90)), url(/assets/background/hero.png)',
-	// filter: 'grayscale(100%)',
-	top: 0,
-	left: 0,
-	width: '100%',
-	height: '100vh',
-	position: 'fixed'
+	[theme.breakpoints.up('md')]: {
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100vh',
+		position: 'fixed'
+	}
 }))
 
 const StyledDescription = styled('div')(({ theme }) => ({

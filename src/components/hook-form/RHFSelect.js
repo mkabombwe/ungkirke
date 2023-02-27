@@ -61,17 +61,7 @@ export function RHFSelect({ name, native, children, helperText, maxHeight = 220,
 
 // ----------------------------------------------------------------------
 
-export function RHFMultiSelect({
-	name,
-	chip,
-	label,
-	options,
-	checkbox,
-	placeholder,
-	helperText,
-	sx,
-	...other
-}) {
+export function RHFMultiSelect({ name, chip, label, options, checkbox, placeholder, helperText, sx, ...other }) {
 	const { control } = useFormContext()
 
 	const renderValues = (selectedIds) => {

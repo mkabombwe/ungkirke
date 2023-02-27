@@ -14,7 +14,7 @@
 		"lint:check": "prettier -c src",
 		"lint:all": "npm run lint:format && npm run lint:fix",
 		"i": "npm i --legacy-peer-deps",
-		"clean": "rm -rf .next .swc _static node_modules package-lock.json",
+		"clean": "rm -rf .next .swc _static dist node_modules package-lock.json",
 		"clean:install": "npm run clean && npm run i",
 		"clean:start": "npm run clean:install && npm run dev",
 		"clean:build": "npm run clean:install && npm run build",
