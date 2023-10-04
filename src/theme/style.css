@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 30 25% 92%;
+	}
+}
+@layer base {
+	* {
+		@apply antialiased;
+	}
+
+	body {
+		@apply bg-background font-public-sans;
+		font-feature-settings:
+			'rlig' 1,
+			'calt' 1;
+	}
+
+	h1,
+	h2,
+	p {
+		@apply !font-public-sans;
+	}
+}
