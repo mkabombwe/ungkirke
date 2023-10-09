@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
+import tailwindcssForms from '@tailwindcss/forms'
 import withMT from '@material-tailwind/react/utils/withMT'
 
 export default withMT({
@@ -22,5 +23,5 @@ export default withMT({
 			}
 		}
 	},
-	plugins: []
+	plugins: [tailwindcssForms]
 } satisfies Config)

@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-
 # Firebase cache
 .firebase/
 firestore-debug.log
@@ -33,3 +32,4 @@ firestore-debug.log
 .env
 package-lock.json
 *.local
+.next

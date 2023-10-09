@@ -24,4 +24,8 @@
 	p {
 		@apply !font-public-sans;
 	}
+
+	.notistack-SnackbarContainer.z-alert {
+		z-index: 10000;
+	}
 }

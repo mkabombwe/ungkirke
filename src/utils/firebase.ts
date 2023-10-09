@@ -1,25 +1,26 @@
-import { initializeApp } from 'firebase/app'
+import { initializeApp, getApps } from 'firebase/app'
 import { getAuth, connectAuthEmulator } from 'firebase/auth'
 import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
 import { getAnalytics, setAnalyticsCollectionEnabled } from 'firebase/analytics'
 import { FIREBASE_API } from './config'
 
-let AUTH, DB, LOG
+// Check if Firebase is already initialized
+const firebaseApp = getApps().length === 0 ? initializeApp(FIREBASE_API) : getApps()[0]!
 
-if (typeof window !== 'undefined') {
-	const firebaseApp = initializeApp(FIREBASE_API)
+const AUTH = getAuth(firebaseApp)
+const DB = getFirestore(firebaseApp)
 
-	AUTH = getAuth(firebaseApp)
-	DB = getFirestore(firebaseApp)
-	LOG = getAnalytics(firebaseApp)
+export const LOG = typeof window !== 'undefined' ? getAnalytics(firebaseApp) : null
 
-	if (process.env.NODE_ENV === 'development') {
-		connectAuthEmulator(AUTH, 'http://localhost:9099')
-		connectFirestoreEmulator(DB, 'localhost', 8080)
-		setAnalyticsCollectionEnabled(LOG, false)
-	} else {
-		setAnalyticsCollectionEnabled(LOG, true)
-	}
-}
+if (typeof window !== 'undefined' && LOG !== null)
+	setAnalyticsCollectionEnabled(LOG, process.env.NODE_ENV === 'development')
 
-export { AUTH, DB, LOG }
+// if (process.env.NODE_ENV === 'development') {
+// 	connectAuthEmulator(AUTH, 'http://localhost:9099')
+// 	connectFirestoreEmulator(DB, 'localhost', 8081)
+// 	if (LOG !== null) setAnalyticsCollectionEnabled(LOG, false)
+// } else {
+// 	if (LOG !== null) setAnalyticsCollectionEnabled(LOG, true)
+// }
+
+export { AUTH, DB }
