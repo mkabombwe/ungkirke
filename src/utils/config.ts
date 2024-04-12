@@ -2,15 +2,13 @@
 // ----------------------------------------------------------------------
 
 export const FIREBASE_API = {
-	apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-	authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-	projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-	storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-	messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-	appId: import.meta.env.VITE_FIREBASE_APP_ID
+	apiKey: "AIzaSyDEQP8LxxarEtBbd8LbCex66xS60sNtfVY",
+	authDomain: "ungkirke.firebaseapp.com",
+	projectId: "ungkirke",
+	storageBucket: "ungkirke.appspot.com",
+	messagingSenderId: "395800754715",
+	appId: "1:395800754715:web:a3d4b1742f1d0606f516be"
 }
-
-console.log(FIREBASE_API)
 
 // LAYOUT
 // ----------------------------------------------------------------------

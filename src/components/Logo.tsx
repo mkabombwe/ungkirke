@@ -1,4 +1,4 @@
-const Logo = ({ color = '#000000', ...rest }) => {
+export const Logo = ({ color = '#000000', ...rest }) => {
 	const logo = (
 		<div {...rest}>
 			<svg viewBox='146.2711 454.1097 755.9289 196.4112' xmlns='http://www.w3.org/2000/svg'>
@@ -25,5 +25,3 @@ const Logo = ({ color = '#000000', ...rest }) => {
 
 	return logo
 }
-
-export default Logo

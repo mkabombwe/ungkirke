@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from 'firebase/app'
-import { getAuth, connectAuthEmulator } from 'firebase/auth'
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 import { getAnalytics, setAnalyticsCollectionEnabled } from 'firebase/analytics'
 import { FIREBASE_API } from './config'
 

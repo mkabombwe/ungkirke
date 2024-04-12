@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import tailwindcssForms from '@tailwindcss/forms'
-import withMT from '@material-tailwind/react/utils/withMT'
+import colors from 'tailwindcss/colors'
 
-export default withMT({
+export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		container: {
@@ -19,9 +19,10 @@ export default withMT({
 		},
 		extend: {
 			colors: {
+				...colors,
 				background: 'hsl(var(--background))'
 			}
 		}
 	},
 	plugins: [tailwindcssForms]
-} satisfies Config)
+} satisfies Config

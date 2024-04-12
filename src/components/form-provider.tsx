@@ -10,7 +10,7 @@ type Props = {
 	className?: string
 }
 
-export default function FormProvider({ children, onSubmit, methods, className }: Props) {
+export function FormProvider({ children, onSubmit, methods, className }: Props) {
 	return (
 		<Form {...methods}>
 			<form onSubmit={onSubmit} className={className}>

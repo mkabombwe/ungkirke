@@ -1,6 +1,4 @@
-import { IconButton } from '@material-tailwind/react'
-import Iconify from '../components/Iconify'
-import Logo from '../components/Logo'
+import { Iconify, Logo } from '../components'
 
 const SOCIALS = [
 	{
@@ -27,9 +25,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 				<div className='flex justify-center space-x-4'>
 					{SOCIALS.map(({ name, icon, path }) => (
 						<a key={name} href={path}>
-							<IconButton className='rounded-full'>
+							<button className='bg-black text-white p-2 rounded-full'>
 								<Iconify icon={icon} />
-							</IconButton>
+							</button>
 						</a>
 					))}
 				</div>
